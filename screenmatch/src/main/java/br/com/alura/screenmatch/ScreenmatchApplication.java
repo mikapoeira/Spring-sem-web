@@ -23,6 +23,10 @@ public class ScreenmatchApplication implements CommandLineRunner {
 		json = consumoApi.obterDados("https://www.omdbapi.com/?t=breaking+bad&season=2&episode=3&apikey=526600ac");
 		DadosEpisodio dadosEpisodio = conversor.obterDados(json,DadosEpisodio.class);
 		System.out.println(dadosEpisodio);
+
+		for(int i = 1;i <= dados.TotalTemporadas(); i++){
+
+		}
 	}
 
 	public static void main(String[] args) {
