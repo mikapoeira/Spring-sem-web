@@ -35,13 +35,22 @@ public class Principal {
             temporadas.add(dadosTemporada);
         }
         temporadas.forEach(System.out::println);
-//        for(int i = 0;i < dados.TotalTemporadas(); i++){
-//            List<DadosEpisodio> episodioTemporada = temporadas.get(i).episodios();
-//            for(int j = 0;j < episodioTemporada.size() ; j++){
-//                System.out.println(episodioTemporada.get(j).titulo());
-//            }
-//        }
+        for(int i = 0;i < dados.TotalTemporadas(); i++){
+            List<DadosEpisodio> episodioTemporada = temporadas.get(i).episodios();
+            for(int j = 0;j < episodioTemporada.size() ; j++){
+                System.out.println(episodioTemporada.get(j).titulo());
+            }
+        }
         temporadas.forEach(t -> t.episodios().forEach(e -> System.out.println(e.titulo())));
+
+//        List<String> nomes = Arrays.asList("Mikael","Mayara","Gabriel","Cicera","Carlos");
+//
+//        nomes.stream()
+//                .sorted()
+//                .limit(3)
+//                .filter(m -> m.startsWith("G"))
+//                .map(m -> m.toUpperCase())
+//                .forEach(System.out::println);
 
     }
 
